@@ -1,13 +1,12 @@
 import { defineStore } from 'pinia';
 
 const initData = {
-  requestObj: null,
-  message: '',
+  requestObj: null, // 请求体
 };
 
 // 存放短期会话级别信息
-// const store = sessionStore()
-export const sessionStore = defineStore('session', {
+// const store = useSessionStore()
+export const useSessionStore = defineStore('session', {
   state: () => ({ ...initData }),
   getters: {
     // 使用方法 store.getJSON(key)

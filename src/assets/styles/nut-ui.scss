@@ -1,0 +1,47 @@
+// nut-countdown
+.nut-countdown {
+  --nut-countdown-color: inherit;
+  --nut-countdown-font-size: none;
+
+  &.inline {
+    display: inline;
+    .nut-countdown__content {
+      display: inline;
+    }
+  }
+}
+
+// nut-cell
+.nut-cell-group {
+  --nut-cell-box-shadow: none;
+  --nut-cell-border-radius: 0;
+  --nut-cell-after-border-bottom: 2rpx solid #ccc;
+}
+.nut-cell-group.no-border {
+  --nut-cell-after-border-bottom: none;
+}
+
+// nut-button
+.nut-button--plain {
+  --nut-button-plain-background-color: none;
+}
+.nut-button--default {
+  --nut-button-default-color: #fff;
+}
+
+// nut-form
+.nut-form {
+  --nut-form-item-body-input-text-align: none;
+  --nut-form-item-tip-text-align: none;
+  .input-text {
+    text-align: inherit !important;
+  }
+}
+.nut-form-item.error.line::before {
+  z-index: 1;
+}
+.nut-theme-dark .nut-form {
+  .nut-input {
+    background-color: transparent;
+  }
+}

@@ -4,7 +4,7 @@ import Components from 'unplugin-vue-components/webpack';
 import NutUIResolver from '@nutui/nutui-taro/dist/resolver';
 
 const config = {
-  projectName: 'cj_taroapp',
+  projectName: 'vue_taroapp',
   date: '2023-12-20',
   designWidth(input) {
     if (input?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
@@ -39,6 +39,7 @@ const config = {
     '@/utils': path.resolve(__dirname, '..', 'src/utils'),
     '@/store': path.resolve(__dirname, '..', 'src/store'),
     '@/api': path.resolve(__dirname, '..', 'src/api'),
+    '@/assets': path.resolve(__dirname, '..', 'src/assets'),
     '@/pages': path.resolve(__dirname, '..', 'src/pages'),
   },
   mini: {

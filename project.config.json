@@ -1,8 +1,8 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "cj_taroapp",
+  "projectname": "vue_taroapp",
   "description": "cj taro app",
-  "appid": "",
+  "appid": "wx4064173e76bacd9a",
   "setting": {
     "urlCheck": true,
     "es6": false,

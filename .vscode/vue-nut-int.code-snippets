@@ -1,5 +1,5 @@
 {
-  // Place your cj_taroapp 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // Place your vue_taroapp 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
   // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
   // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
   // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
@@ -11,11 +11,9 @@
     "prefix": "vuenut",
     "body": [
       "<template>",
-      "  <nut-config-provider theme=\"dark\">",
-      "    <view class=\"container $1\">"
-      "      <text>$1</text>",
-      "    </view>",
-      "  </nut-config-provider>",
+      "  <view class=\"container $1\">"
+      "    <text>$1</text>",
+      "  </view>",
       "</template>",
       "",
       "<script setup>",

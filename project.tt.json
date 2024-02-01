@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "./",
-  "projectname": "cj_taroapp",
+  "projectname": "vue_taroapp",
   "description": "cj taro app",
   "appid": "touristappid",
   "setting": {

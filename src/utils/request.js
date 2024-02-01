@@ -1,6 +1,6 @@
 import axios from 'taro-axios';
 
-import { sessionStore } from '@/store/sessionStore';
+import { useSessionStore } from '@/store/sessionStore';
 import { tansParams } from '@/utils/helper';
 import Taro from '@tarojs/taro';
 
@@ -47,9 +47,9 @@ service.interceptors.request.use(
         );
         return config;
       }
-      const sessionObj = sessionStore().getJSON('requestObj');
+      const sessionObj = useSessionStore().getJSON('requestObj');
       if (sessionObj === undefined || sessionObj === null || sessionObj === '') {
-        sessionStore().setJSON('requestObj', requestObj);
+        useSessionStore().setJSON('requestObj', requestObj);
       } else {
         const s_url = sessionObj.url; // 请求地址
         const s_data = sessionObj.data; // 请求数据
@@ -64,7 +64,7 @@ service.interceptors.request.use(
           console.warn(`[${s_url}]: ` + message);
           return Promise.reject(new Error(message));
         } else {
-          sessionStore().setJSON('requestObj', requestObj);
+          useSessionStore().setJSON('requestObj', requestObj);
         }
       }
     }
@@ -83,7 +83,10 @@ service.interceptors.response.use(
     // 未设置状态码则默认成功状态
     const code = res.data.code || 200;
     // 二进制数据则直接返回
-    if (res.request.responseType === 'blob' || res.request.responseType === 'arraybuffer') {
+    if (
+      res.request.responseType === 'blob' ||
+      res.request.responseType === 'arraybuffer'
+    ) {
       return res.data;
     }
     if (code !== 200) {
