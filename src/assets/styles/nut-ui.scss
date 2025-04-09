@@ -20,21 +20,33 @@
 .nut-cell-group.no-border {
   --nut-cell-after-border-bottom: none;
 }
+.nut-cell-group.shadow {
+  --nut-cell-box-shadow: 0px 2px 14px 0px rgba(237, 238, 241, 1);
+  --nut-cell-border-radius: 12px;
+}
 
 // nut-button
+.nut-button {
+  --nut-button-disabled-opacity: 0.6;
+}
 .nut-button--plain {
   --nut-button-plain-background-color: none;
 }
-.nut-button--default {
-  --nut-button-default-color: #fff;
+.nut-button.nut-button--disabled {
+  color: #666666 !important;
+  background: var(--nut-disable-color) !important;
 }
 
 // nut-form
 .nut-form {
-  --nut-form-item-body-input-text-align: none;
-  --nut-form-item-tip-text-align: none;
   .input-text {
     text-align: inherit !important;
+  }
+  .nut-form-item__body__slots .nut-input {
+    text-align: inherit;
+  }
+  .nut-form-item__body__tips {
+    text-align: inherit;
   }
 }
 .nut-form-item.error.line::before {
@@ -44,4 +56,19 @@
   .nut-input {
     background-color: transparent;
   }
+}
+
+.nut-checkbox {
+  --nut-checkbox-label-margin-left: 10px;
+}
+
+.nut-avatar-round {
+  .h5-img {
+    border-radius: 50%;
+  }
+}
+
+.nut-popup--bottom {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
 }

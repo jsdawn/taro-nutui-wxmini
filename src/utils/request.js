@@ -1,7 +1,7 @@
 import axios from 'taro-axios';
 
 import { useSessionStore } from '@/store/sessionStore';
-import { tansParams } from '@/utils/helper';
+import { tansParams } from '@/utils/index';
 import Taro from '@tarojs/taro';
 
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8';

@@ -2,9 +2,6 @@ import { createPinia } from 'pinia';
 import { createApp } from 'vue';
 
 import './app.scss';
-import '@/assets/styles/common.scss';
-import '@/assets/styles/flex.scss';
-import '@/assets/styles/nut-ui.scss';
 
 const pinia = createPinia();
 const App = createApp({

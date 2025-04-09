@@ -2,21 +2,11 @@
   <view class="container home-page">
     <nut-form :model-value="form" :rules="rules">
       <nut-form-item prop="account">
-        <nut-input
-          v-model="form.account"
-          class="nut-input-text"
-          placeholder="账号"
-          type="text"
-        />
+        <nut-input v-model="form.account" placeholder="账号" type="text" />
       </nut-form-item>
 
       <nut-form-item prop="password">
-        <nut-input
-          v-model="form.password"
-          class="nut-input-text"
-          placeholder="密码"
-          type="password"
-        />
+        <nut-input v-model="form.password" placeholder="密码" type="password" />
       </nut-form-item>
 
       <nut-cell class="action-btns" title="">

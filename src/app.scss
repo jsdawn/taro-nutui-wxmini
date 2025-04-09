@@ -1,3 +1,6 @@
+@import './assets/styles/nut-ui.scss';
+@import './assets/styles/common.scss';
+
 :root,
 page {
   // 主色调
@@ -50,6 +53,9 @@ page {
 page {
   font-size: var(--nut-font-size-base); // 14px
   color: var(--nut-title-color);
+  background: var(--nut-help-color);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 scroll-view,
