@@ -7,9 +7,11 @@ const config = {
   projectName: 'vue_taroapp',
   date: '2023-12-20',
   designWidth(input) {
+    // 配置 NutUI 375尺寸，1px=2rpx
     if (input?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
       return 375;
     }
+    // 全局使用Taro默认的750尺寸，1px=1rpx
     return 750;
   },
   deviceRatio: {
@@ -20,7 +22,17 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: ['@tarojs/plugin-html'],
+  plugins: [
+    '@tarojs/plugin-html',
+    [
+      '@dcasia/mini-program-tailwind-webpack-plugin/dist/taro',
+      {
+        enableRpx: true,
+        enableDebugLog: true,
+        designWidth: 375, // windicss的设计稿宽度rem转为rpx，1px = 2rpx
+      },
+    ],
+  ],
   defineConstants: {},
   copy: {
     patterns: [],

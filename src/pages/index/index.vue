@@ -1,5 +1,9 @@
 <template>
-  <view class="container home-page">
+  <view class="wx-page home-page">
+    <view class="text-center text-lg">
+      <text>欢迎登录</text>
+    </view>
+
     <nut-form :model-value="form" :rules="rules">
       <nut-form-item prop="account">
         <nut-input v-model="form.account" placeholder="账号" type="text" />

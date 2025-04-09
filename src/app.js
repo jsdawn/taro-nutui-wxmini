@@ -1,6 +1,7 @@
 import { createPinia } from 'pinia';
 import { createApp } from 'vue';
 
+import 'windi.css';
 import './app.scss';
 
 const pinia = createPinia();
